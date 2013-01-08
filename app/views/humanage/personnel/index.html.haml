@@ -1,0 +1,9 @@
+= link_to "Add Personnel", new_personnel_path
+
+- flash.each do |k,v|
+  .flash{:class => "#{k}"}
+    = v
+
+%ul
+  - @personnels.each do |personnel|
+    %li= personnel.name
